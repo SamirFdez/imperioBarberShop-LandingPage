@@ -25,66 +25,62 @@ export const contactInfo = [
     icon: "ri-map-pin-line",
     title: "Address",
     content: siteData.address,
-    link: null,
   },
   {
     icon: "ri-phone-line",
     title: "Phone",
     content: siteData.phone,
-    link: `tel:${siteData.phone}`,
   },
   {
     icon: "ri-mail-line",
     title: "Email",
     content: siteData.email,
-    link: `mailto:${siteData.email}`,
   },
   {
     icon: "ri-time-line",
     title: "Hours",
     content: ["Open 24/7 for Premium and Elite members", "Basic members: 5 AM - 11 PM daily"],
-    link: null,
   },
 ];
 
 export const navigation = [
   { name: "Inicio", href: "/" },
   { name: "Servicios", href: "/services" },
-  { name: "Membresia", href: "/pricing" },
+  { name: "Membresía", href: "/pricing" },
   { name: "Nosotros", href: "/about" },
   { name: "Contacto", href: "/contact" },
 ];
 
 export const features = [
   {
-    title: "24/7 Access",
-    description: "Work out on your schedule with round-the-clock access to our facilities",
+    title: "Atención sin largas esperas",
+    description: "Agenda tu cita fácilmente y disfruta de un servicio rápido y puntual, adaptado a tu horario.",
     icon: "ri-time-line",
   },
   {
-    title: "Expert Trainers",
-    description: "Certified personal trainers to guide you on your fitness journey",
-    icon: "ri-user-star-line",
+    title: "Peluqueros Expertos",
+    description: "Nuestro equipo está compuesto por profesionales certificados, siempre al día con las últimas tendencias y técnicas.",
+    icon: "ri-star-smile-fill",
   },
   {
-    title: "Modern Equipment",
-    description: "State-of-the-art fitness equipment for all your training needs",
-    icon: "ri-settings-3-line",
+    title: "Productos de Alta Calidad",
+    description: "Trabajamos con productos profesionales que cuidan tu piel y cabello.",
+    icon: "ri-diamond-fill",
   },
   {
-    title: "Group Classes",
-    description: "Join energizing group classes from yoga to HIIT",
-    icon: "ri-group-line",
+    title: "Cortes Personalizados",
+    description: "Desde cortes clásicos hasta looks modernos, diseñamos el estilo que mejor se adapta a ti.",
+    icon: "ri-scissors-2-fill",
   },
   {
-    title: "Nutrition Support",
-    description: "Get personalized nutrition plans to complement your workouts",
-    icon: "ri-restaurant-line",
+    title: "Higiene y Seguridad",
+    description: "Herramientas esterilizadas y protocolos de limpieza para tu total tranquilidad.",
+    icon: "ri-shield-check-fill",
   },
   {
-    title: "Community",
-    description: "Join a supportive community of fitness enthusiasts",
-    icon: "ri-community-line",
+    title: "Ambiente Cómodo y Agradable",
+    description: "Disfruta de un espacio acogedor donde te sentirás relajado y bien atendido desde que llegas.",
+    icon: "ri-service-fill",
   },
 ];
 
@@ -485,3 +481,6 @@ export const paymentOptions = {
   trial: "Free 7-day trial available for new members",
 };
 
+export const wsMessage = encodeURIComponent(
+  "Hola, estoy interesado en adquirir un servicio."
+);

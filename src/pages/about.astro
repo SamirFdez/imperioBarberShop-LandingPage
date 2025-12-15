@@ -5,8 +5,8 @@ import { siteData, trainers, history } from "../data/siteData";
 ---
 
 <Layout
-  title={`About Us - ${siteData.name}`}
-  description="Learn about our mission, values, and expert trainers"
+  title={`Sobre Nosotros - ${siteData.name}`}
+  description="Conoce nuestra misión, valores y barberos expertos"
 >
   <!-- Hero Section -->
   <section
@@ -162,12 +162,13 @@ import { siteData, trainers, history } from "../data/siteData";
             let className = "";
             if (index + 1 == 4) {
               className = "lg:col-start-2";
-            }
-            else if (index + 1 == 5) {
+            } else if (index + 1 == 5) {
               className = "md:col-start-2 lg:col-start-4";
             }
             return (
-              <div class={`bg-slate-900 p-8 rounded-xl border border-slate-700 hover:border-orange-500 transition-all transform hover:scale-105 md:col-span-2 ${className}`}>
+              <div
+                class={`bg-slate-900 p-8 rounded-xl border border-slate-700 hover:border-orange-500 transition-all transform hover:scale-105 md:col-span-2 ${className}`}
+              >
                 <div class="text-center mb-6">
                   <div class="w-40 h-40 rounded-full mx-auto mb-4 overflow-hidden border-4 border-orange-500/20">
                     <Image

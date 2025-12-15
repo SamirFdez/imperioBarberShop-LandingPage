@@ -1,5 +1,5 @@
 ---
-import { navigation, siteData } from "../data/siteData";
+import { navigation, siteData, wsMessage } from "../data/siteData";
 ---
 
 <header
@@ -20,20 +20,20 @@ import { navigation, siteData } from "../data/siteData";
       <!-- Desktop Navigation -->
       <div class="hidden md:flex md:items-center md:justify-center md:gap-8">
         {
-          navigation.map((item) => {
-            const isActive = Astro.url.pathname === item.href;
-            return (
-              <a
-                href={item.href}
-                class={`${isActive ? "text-cyan-500 hover:text-cyan-600" : "text-gray-300 hover:text-cyan-500 "} transition-colors font-medium text-base py-2`}
-              >
-                {item.name}
-              </a>
-            );
-          })
+          navigation.map((item) => (
+            <a
+              href={item.href}
+              class="relative text-gray-300 hover:text-cyan-500 transition-colors font-medium text-base py-2 group"
+            >
+              {item.name}
+              <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-500 transition-all duration-300 group-hover:w-full" />
+            </a>
+          ))
         }
         <a
-          href="/contact"
+          href={`https://wa.me/18296030780?text=${wsMessage}`}
+          target="_blank"
+          rel="noopener noreferrer"
           class="bg-cyan-500 hover:bg-cyan-700 text-white rounded-lg font-semibold transition-all duration-200 inline-flex items-center justify-center gap-2 px-6 py-2.5"
         >
           Escríbenos
