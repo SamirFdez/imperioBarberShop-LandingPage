@@ -227,31 +227,21 @@ import MapImage from "@assets/location.png";
   <!-- Map Section (Placeholder) -->
   <section class="py-20 bg-slate-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-white mb-12 text-center">Encuéntranos</h2>
+      <h2 class="text-3xl font-bold text-white mb-12 text-center">
+        Encuéntranos
+      </h2>
       <div
         class="max-w-5xl mx-auto bg-slate-800 p-8 rounded-xl border border-slate-700"
       >
         <div
-          class="aspect-video bg-slate-700 rounded-lg flex items-center justify-center overflow-hidden relative"
+          class="aspect-video bg-slate-700 rounded-lg overflow-hidden relative"
         >
-          <Image
-            src={MapImage}
-            alt="Gym location map"
-            width={1200}
-            height={600}
-            class="w-full h-full object-cover opacity-50"
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.7724375169505!2d-69.81159892383148!3d18.493964182594517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf870034f3213d%3A0x83a44c70caffa53a!2sBarber%C3%ADa%3A%20IMPERIOdesign%20BarberShop!5e0!3m2!1ses-419!2sdo!4v1765891986118!5m2!1ses-419!2sdo"
+            class="w-full h-full opacity-80 border-0"
+            allowfullscreen=""
             loading="lazy"
-          />
-          <div
-            class="absolute inset-0 flex items-center justify-center text-center p-4"
-          >
-            <div>
-              <i class="ri-map-pin-line text-5xl text-cyan-500 mb-4"></i>
-              <p class="text-gray-300 text-lg">
-                
-              </p>
-            </div>
-          </div>
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>

@@ -1,7 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import { siteData, trainers, history } from "../data/siteData";
+import logo from "@/assets/logo.png";
+import { siteData, ourValues, trainers, history } from "../data/siteData";
 ---
 
 <Layout
@@ -14,12 +15,25 @@ import { siteData, trainers, history } from "../data/siteData";
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto">
+        <Image
+          src={logo}
+          alt={`Logo - ${siteData.name}`}
+          class="block mx-auto w-40 h-40 lg:w-64 lg:h-64 object-contain mb-6"
+          loading="lazy"
+        />
         <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
-          About {siteData.name}
+          ¿Quiénes somos?
         </h1>
+        <p class="text-xl text-gray-300 mb-6">
+          En Imperio Design Barber Shop somos una barbería pensada para quienes
+          valoran el buen estilo y un servicio de calidad. Combinamos técnicas
+          clásicas y modernas para ofrecer cortes precisos, acabados impecables
+          y un ambiente cómodo para todo tipo de clientes.
+        </p>
         <p class="text-xl text-gray-300">
-          We're dedicated to helping you achieve your fitness goals and live a
-          healthier life
+          Nuestro equipo trabaja con profesionalismo y pasión, cuidando cada
+          detalle para que cada visita sea una experiencia agradable y salgas
+          con confianza en tu imagen.
         </p>
       </div>
     </div>
@@ -30,19 +44,18 @@ import { siteData, trainers, history } from "../data/siteData";
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-4xl mx-auto">
         <h2 class="text-4xl font-bold text-white mb-8 text-center">
-          Our Mission
+          Nuestra misión
         </h2>
         <div class="prose prose-invert max-w-none">
           <p class="text-xl text-gray-300 mb-6">
-            At {siteData.name}, we believe that fitness is not just about
-            physical strength, but about building confidence, discipline, and a
-            positive mindset. Our mission is to create an inclusive community
-            where everyone feels welcome and supported on their fitness journey.
+            En Imperio Design Barber Shop nuestra misión es ofrecer servicios de
+            barbería de alta calidad, combinando técnicas clásicas y modernas
+            para brindar cortes precisos, estilos actuales y una experiencia
+            cómoda y profesional.
           </p>
-          <p class="text-lg text-gray-400 mb-6">
-            We provide state-of-the-art facilities, expert guidance, and a
-            supportive environment that empowers our members to push their
-            limits and achieve extraordinary results.
+          <p class="text-lg text-gray-300 mb-6">
+            Trabajamos con pasión y compromiso, cuidando cada detalle para que
+            cada cliente salga satisfecho y con confianza en su imagen.
           </p>
         </div>
       </div>
@@ -53,49 +66,20 @@ import { siteData, trainers, history } from "../data/siteData";
   <section class="py-20 bg-slate-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-4xl font-bold text-white mb-12 text-center">
-        Our Values
+        Nuestros Valores
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        <div
-          class="bg-slate-800 p-8 rounded-xl border border-slate-700 text-center hover:border-orange-500 transition-all"
-        >
-          <div
-            class="w-20 h-20 bg-orange-500/10 rounded-lg flex items-center justify-center mx-auto mb-6"
-          >
-            <i class="ri-trophy-line text-4xl text-orange-500"></i>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-3">Excellence</h3>
-          <p class="text-gray-400 leading-relaxed">
-            We strive for excellence in everything we do, from our facilities to
-            our service
-          </p>
-        </div>
-        <div
-          class="bg-slate-800 p-8 rounded-xl border border-slate-700 text-center hover:border-orange-500 transition-all"
-        >
-          <div
-            class="w-20 h-20 bg-orange-500/10 rounded-lg flex items-center justify-center mx-auto mb-6"
-          >
-            <i class="ri-hand-heart-line text-4xl text-orange-500"></i>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-3">Community</h3>
-          <p class="text-gray-400 leading-relaxed">
-            Building a supportive community where everyone can thrive together
-          </p>
-        </div>
-        <div
-          class="bg-slate-800 p-8 rounded-xl border border-slate-700 text-center hover:border-orange-500 transition-all"
-        >
-          <div
-            class="w-20 h-20 bg-orange-500/10 rounded-lg flex items-center justify-center mx-auto mb-6"
-          >
-            <i class="ri-focus-3-line text-4xl text-orange-500"></i>
-          </div>
-          <h3 class="text-2xl font-bold text-white mb-3">Results</h3>
-          <p class="text-gray-400 leading-relaxed">
-            Focused on delivering real, measurable results for every member
-          </p>
-        </div>
+        {
+          ourValues.map((value) => (
+            <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 text-center hover:border-cyan-500 transition-all">
+              <div class="w-20 h-20 bg-cyan-500/10 rounded-lg flex items-center justify-center mx-auto mb-6">
+                <i class={`${value.icon} text-4xl text-cyan-500`} />
+              </div>
+              <h3 class="text-2xl font-bold text-white mb-3">{value.value}</h3>
+              <p class="text-gray-400 leading-relaxed">{value.description}</p>
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>

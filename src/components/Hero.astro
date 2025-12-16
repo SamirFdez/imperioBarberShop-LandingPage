@@ -1,8 +1,7 @@
 ---
 import { Image } from "astro:assets";
-import { siteData } from "@data/siteData";
+import { siteData, dataClient } from "@data/siteData";
 import HeroImage from "@/assets/hero.jpg";
-// import HeroImage from "@assets/photo-1534438327276-14e5300c3a48.jpg"
 ---
 
 <section
@@ -50,40 +49,22 @@ import HeroImage from "@/assets/hero.jpg";
 
         <!-- Stats -->
         <div class="grid grid-cols-3 gap-6 max-w-lg mx-auto lg:mx-0">
-          <div class="text-center lg:text-left">
-            <div
-              class="text-4xl md:text-5xl font-bold text-cyan-500 mb-2 counter"
-              data-target="130"
-              data-suffix="+"
-            >
-              0
-            </div>
-            <div class="text-gray-300 text-sm md:text-base">Clientes</div>
-          </div>
-
-          <div class="text-center lg:text-left">
-            <div
-              class="text-4xl md:text-5xl font-bold text-cyan-500 mb-2 counter"
-              data-target="100"
-              data-suffix="%"
-            >
-              0
-            </div>
-            <div class="text-gray-300 text-sm md:text-base">Calidad</div>
-          </div>
-
-          <div class="text-center lg:text-left">
-            <div
-              class="text-4xl md:text-5xl font-bold text-cyan-500 mb-2 counter"
-              data-target="50"
-              data-suffix="+"
-            >
-              0
-            </div>
-            <div class="text-gray-300 text-sm md:text-base">
-              Miembros Activos
-            </div>
-          </div>
+          {
+            dataClient.map((data) => (
+              <div class="text-center lg:text-left">
+                <div
+                  class="text-4xl md:text-5xl font-bold text-cyan-500 mb-2 counter"
+                  data-target={data.target}
+                  data-suffix={data.suffix}
+                >
+                  0
+                </div>
+                <div class="text-gray-300 text-sm md:text-base">
+                  {data.title}
+                </div>
+              </div>
+            ))
+          }
         </div>
       </div>
 

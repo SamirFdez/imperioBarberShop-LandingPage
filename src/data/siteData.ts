@@ -1,23 +1,45 @@
+export const wsMessage = encodeURIComponent(
+  "Hola, estoy interesado en adquirir un servicio."
+);
+
 export const siteData = {
   name: "Imperio Barber Shop",
   tagline: "Te Mostramos Tu Estilo",
-  description: "Te mostramos tu estilo",
+  description: "Cortes modernos, atención personalizada y resultados que hablan por sí solos.",
   address: "Plaza Erick, Aut. San Isidro, Santo Domingo Este",
   phone: "+1 (829) 603-0780",
   email: "imperiodesignbarbershop@gmail.com",
   social: {
-    facebook: "https://facebook.com",
-    instagram: "https://instagram.com",
-    twitter: "https://twitter.com",
-    youtube: "https://youtube.com",
+    facebook: "https://www.facebook.com/imperiodesignbarbershop",
+    instagram: "https://www.instagram.com/imperiodesignbarbershop/",
+    tiktok: "https://www.tiktok.com/@Imperiodesignbarbershop",
+    whatsapp: `https://wa.me/18296030780?text=${wsMessage}`,
   },
 };
+
+export const dataClient = [
+  {
+    title: "Clientes Mensuales",
+    target: "130",
+    suffix: "+"
+  },
+  {
+    title: "Satisfacción de Clientes",
+    target: "96",
+    suffix: "%"
+  },
+  {
+    title: "Miembros Activos",
+    target: "50",
+    suffix: "+"
+  },
+]
 
 export const socialLinks = [
   { name: "facebook", icon: "ri-facebook-fill", label: "Facebook" },
   { name: "instagram", icon: "ri-instagram-fill", label: "Instagram" },
-  { name: "twitter", icon: "ri-twitter-x-fill", label: "Twitter" },
-  { name: "youtube", icon: "ri-whatsapp-fill", label: "YouTube" },
+  { name: "tiktok", icon: "ri-tiktok-fill", label: "Tiktok" },
+  { name: "whatsapp", icon: "ri-whatsapp-fill", label: "Whatsapp" },
 ];
 
 export const contactInfo = [
@@ -38,8 +60,8 @@ export const contactInfo = [
   },
   {
     icon: "ri-time-line",
-    title: "Hours",
-    content: ["Open 24/7 for Premium and Elite members", "Basic members: 5 AM - 11 PM daily"],
+    title: "Horario",
+    content: ["Lunes a Jueves: 8 AM - 8 PM", "Viernes y Domingo: 8 AM - 5 PM", "Sábado no laboramos"],
   },
 ];
 
@@ -196,21 +218,21 @@ export const pricingPlans = [
 
 export const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "Member for 2 years",
-    content: "FitZone has completely transformed my fitness journey. The trainers are amazing and the community is so supportive!",
+    name: "Julissa Fernández",
+    role: "Miembro",
+    content: "Llevo más de 5 años ultizando sus servicios, son excelentes jóvenes, el ambiente es muy sano, Recomendado 100%.",
     rating: 5,
   },
   {
     name: "Mike Chen",
-    role: "Member for 1 year",
-    content: "Best gym in town! The equipment is top-notch and the 24/7 access fits perfectly with my schedule.",
+    role: "Cliente",
+    content: "Una atención 1A de verdad que un ambiente confiable, los chicos supera decentes.. 100% recomendada.",
     rating: 5,
   },
   {
-    name: "Emily Rodriguez",
-    role: "Member for 6 months",
-    content: "I love the variety of classes offered. The HIIT sessions are intense but so rewarding. Highly recommend!",
+    name: "Domingo Javier",
+    role: "Miembro",
+    content: "Llevo ya un buen tiempo visitando la barbería y puedo decir que es un excelente ambiente. Los muchachos están bien enfocados en el servicio y atenciones.",
     rating: 5,
   },
 ];
@@ -250,28 +272,32 @@ export const facilities = [
 
 export const faqs = [
   {
-    question: "Do I need to be fit to join?",
-    answer: "Not at all! We welcome members of all fitness levels. Our trainers will help you start at your own pace and gradually build your strength and endurance.",
+    question: "¿Necesito cita previa?",
+    answer: "No, no se necesita cita previa. Atendemos sin cita por orden de llegada pero dando prioridad a los miembros que tienen citas previas.",
   },
   {
-    question: "What should I bring to the gym?",
-    answer: "Just bring a water bottle, towel, and comfortable workout clothes. We provide all equipment, lockers, and shower facilities.",
+    question: "¿Qué servicios ofrecen?",
+    answer: "- Corte de cabello para todas las edades.\n - Corte femenino.\n - Todo tipo de Fade.\n - Corte a tijera.\n - Arreglo de barba y afeitado profesional.\n\nTodos nuestros servicios incluyen asesoría de estilo.",
   },
   {
-    question: "Can I try the gym before committing?",
-    answer: "Yes! We offer a free 7-day trial pass so you can experience our facilities, classes, and community before making a commitment.",
+    question: "¿Cuánto dura un corte?",
+    answer: "Un corte estándar toma entre 30 y 45 minutos, dependiendo del servicio elegido.",
   },
   {
-    question: "Are personal trainers included?",
-    answer: "Personal training is available as an add-on service. Premium and Elite memberships include consultation sessions, and Elite members get unlimited personal training.",
+    question: "¿Qué métodos de pago aceptan?",
+    answer: "Aceptamos efectivo y transferencias a diferentes entidades bancarias",
   },
   {
-    question: "What are your operating hours?",
-    answer: "We're open 24/7 for Premium and Elite members. Basic members have access during staffed hours (5 AM - 11 PM).",
+    question: "¿Cuál es el horario laboral?",
+    answer: "- Lunes a Jueves de 8 AM - 8 PM. \n - Viernes y Domingo de 8 AM - 5 PM. \n - Sábados no laborables.",
   },
   {
-    question: "Is there parking available?",
-    answer: "Yes, we have free parking available for all members. The parking lot is well-lit and secure.",
+    question: "¿Ofrecen membresías?",
+    answer: "Sí. Nuestras membresías incluyen precios preferenciales en productos, prioridad en citas y beneficios exclusivos.",
+  },
+  {
+    question: "¿Tienen parqueo disponible?",
+    answer: "Sí, contamos con el parqueo de la plaza para la comodidad de nuestros clientes.",
   },
 ];
 
@@ -314,15 +340,6 @@ export const successStories = [
     beforeImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=600&fit=crop&q=80",
     afterImage: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=600&fit=crop&q=80",
   },
-];
-
-export const statistics = [
-  { number: "500+", label: "Active Members", icon: "ri-user-line" },
-  { number: "50+", label: "Expert Trainers", icon: "ri-user-star-line" },
-  { number: "10k+", label: "Classes Completed", icon: "ri-calendar-check-line" },
-  { number: "5k+", label: "Pounds Lost", icon: "ri-line-chart-line" },
-  { number: "98%", label: "Satisfaction Rate", icon: "ri-heart-line" },
-  { number: "15+", label: "Years Experience", icon: "ri-award-line" },
 ];
 
 export const fullSchedule = {
@@ -437,6 +454,24 @@ export const trainers = [
   },
 ];
 
+export const ourValues = [
+  {
+    value: "Excelencia",
+    description: "Excelencia en cada corte, cuidando cada detalle para resaltar tu estilo.",
+    icon: "ri-scissors-2-line",
+  },
+  {
+    value: "Experiencia",
+    description: "Más que un corte, una experiencia cómoda y personalizada.",
+    icon: "ri-star-fill",
+  },
+  {
+    value: "Confianza",
+    description: "Servicio honesto y consistente para que siempre regreses con seguridad.",
+    icon: "ri-hand-heart-line",
+  }
+]
+
 export const history = [
   {
     year: "2009",
@@ -481,6 +516,3 @@ export const paymentOptions = {
   trial: "Free 7-day trial available for new members",
 };
 
-export const wsMessage = encodeURIComponent(
-  "Hola, estoy interesado en adquirir un servicio."
-);
