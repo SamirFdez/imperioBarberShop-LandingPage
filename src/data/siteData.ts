@@ -1,6 +1,14 @@
+import maquinaRecortar from "@/assets/maquina-recortar.png"
+import cremaAfeitar from "@/assets/crema-afeitar.png";
+import gelPeinar from "@/assets/gel-peinar.png";
+import ceraPeinar from "@/assets/cera-peinar.png";
+import shampoo from "@/assets/shampoo.png";
+
 export const wsMessage = encodeURIComponent(
   "Hola, estoy interesado en adquirir un servicio."
 );
+
+export const googleReview = "https://www.google.com/search?hl=es&gl&q=Barber%C3%ADa:+IMPERIOdesign+BarberShop,+Autop.+Cnel+Rafael+Tom%C3%A1s+Fern%C3%A1ndez+Dom%C3%ADnguez,+Santo+Domingo+Este,+Rep%C3%BAblica+Dominicana&ludocid=9485790762474906938&lsig=AB86z5UKScX1V-DVzRG5zapItUqJ&hl=es&gl=419#lrd=0x8eaf870034f3213d:0x83a44c70caffa53a,1"
 
 export const siteData = {
   name: "Imperio Barber Shop",
@@ -177,40 +185,38 @@ export const classes = [
 
 export const pricingPlans = [
   {
-    name: "Basic",
-    price: "$29",
-    period: "/month",
+    name: "Vip",
+    price: "RD$ 1,000",
+    period: "/mes",
     features: [
-      "Access to gym facilities",
-      "Basic equipment usage",
-      "Locker room access",
-      "Free parking",
+      "Tarjeta de presentación Vip",
+      "Una reservación cada 15 días",
+      "Un 5% de descuento en productos de peluquería",
     ],
     popular: false,
   },
   {
-    name: "Premium",
-    price: "$59",
-    period: "/month",
+    name: "Pro",
+    price: "RD$ 2,000",
+    period: "/mes",
     features: [
-      "Everything in Basic",
-      "Group classes included",
-      "Personal trainer consultation",
-      "Nutrition guidance",
-      "24/7 access",
+      "Tarjeta de presentación Pro",
+      "Una reservación cada semana",
+      "Un 10% de descuento en productos de peluquería",
+      "Horario extendido"
     ],
     popular: true,
   },
   {
     name: "Elite",
-    price: "$99",
-    period: "/month",
+    price: "RD$ 4,000",
+    period: "/mes",
     features: [
-      "Everything in Premium",
-      "Unlimited personal training",
-      "Custom meal plans",
-      "Priority class booking",
-      "Spa & recovery access",
+      "Tarjeta de presentación Elite",
+      "Dos reservaciones cada semana",
+      "Un 15% de descuento en productos de peluquería",
+      "Horario extendido",
+      "Servicio a domicilio"
     ],
     popular: false,
   },
@@ -224,7 +230,7 @@ export const testimonials = [
     rating: 5,
   },
   {
-    name: "Mike Chen",
+    name: "Genesis Reyes",
     role: "Cliente",
     content: "Una atención 1A de verdad que un ambiente confiable, los chicos supera decentes.. 100% recomendada.",
     rating: 5,
@@ -237,36 +243,31 @@ export const testimonials = [
   },
 ];
 
-export const facilities = [
+export const products = [
   {
-    title: "Cardio Zone",
-    description: "State-of-the-art treadmills, ellipticals, and bikes",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop&q=80",
+    title: "Máquina de recortar",
+    description: "Versátil y práctica para el cuidado personal de rostro y cuerpo",
+    image: maquinaRecortar,
   },
   {
-    title: "Strength Training",
-    description: "Comprehensive free weights and machines",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop&q=80",
+    title: "Crema para afeitar",
+    description: "Suaviza la piel y facilita un afeitado cómodo y sin irritaciones",
+    image: cremaAfeitar,
   },
   {
-    title: "Group Class Studio",
-    description: "Spacious studio for yoga, HIIT, and more",
-    image: "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=800&h=600&fit=crop&q=80",
+    title: "Cera para peinar",
+    description: "Aporta fijación y textura, dejando el cabello más firme y controlado",
+    image: ceraPeinar,
   },
   {
-    title: "Locker Rooms",
-    description: "Clean, modern facilities with showers",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop&q=80",
+    title: "Gel",
+    description: "Fijación duradera con acabado limpio y control total del peinado",
+    image: gelPeinar,
   },
   {
-    title: "Functional Training",
-    description: "TRX, battle ropes, and functional equipment",
-    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=600&fit=crop&q=80",
-  },
-  {
-    title: "Recovery Zone",
-    description: "Stretching area and foam rollers",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop&q=80",
+    title: "Shampoo",
+    description: "Limpia y revitaliza el cabello, dejándolo fresco y saludable",
+    image: shampoo,
   },
 ];
 

@@ -1,5 +1,5 @@
 ---
-import { testimonials } from "../data/siteData";
+import { testimonials, googleReview } from "../data/siteData";
 ---
 
 <section id="testimonials" class="py-20 bg-slate-900">
@@ -9,7 +9,7 @@ import { testimonials } from "../data/siteData";
         Testimonios de Nuestros Clientes
       </h2>
       <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-        Experiencias reales de personas que confían en nuestro trabajo.
+        Experiencias reales de personas que confían en nuestro trabajo
       </p>
     </div>
 
@@ -32,6 +32,16 @@ import { testimonials } from "../data/siteData";
           </div>
         ))
       }
+    </div>
+    <div class="text-center mt-12">
+      <a
+        href={googleReview}
+        target="_blank"
+        class="inline-flex items-center gap-3 bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105"
+      >
+        Ver Más Reseñas
+        <i class="ri-arrow-right-line"></i>
+      </a>
     </div>
   </div>
 </section>
