@@ -1,8 +1,5 @@
-import maquinaRecortar from "@/assets/maquina-recortar.png"
-import cremaAfeitar from "@/assets/crema-afeitar.png";
-import gelPeinar from "@/assets/gel-peinar.png";
-import ceraPeinar from "@/assets/cera-peinar.png";
-import shampoo from "@/assets/shampoo.png";
+import { productImages } from "@/assets/products";
+import { hairChangesImages } from "@/assets/hairChanges";
 
 export const wsMessage = encodeURIComponent(
   "Hola, estoy interesado en adquirir un servicio."
@@ -247,27 +244,27 @@ export const products = [
   {
     title: "Máquina de recortar",
     description: "Versátil y práctica para el cuidado personal de rostro y cuerpo",
-    image: maquinaRecortar,
+    image: productImages.maquinaRecortar,
   },
   {
     title: "Crema para afeitar",
     description: "Suaviza la piel y facilita un afeitado cómodo y sin irritaciones",
-    image: cremaAfeitar,
+    image: productImages.cremaAfeitar,
   },
   {
     title: "Cera para peinar",
     description: "Aporta fijación y textura, dejando el cabello más firme y controlado",
-    image: ceraPeinar,
+    image: productImages.ceraPeinar,
   },
   {
     title: "Gel",
     description: "Fijación duradera con acabado limpio y control total del peinado",
-    image: gelPeinar,
+    image: productImages.gelPeinar,
   },
   {
     title: "Shampoo",
     description: "Limpia y revitaliza el cabello, dejándolo fresco y saludable",
-    image: shampoo,
+    image: productImages.shampoo,
   },
 ];
 
@@ -313,33 +310,24 @@ export const classSchedule = [
   { time: "7:00 PM", class: "Yoga & Flexibility", trainer: "Sarah Johnson" },
 ];
 
-export const successStories = [
+export const styleChannge = [
   {
-    name: "Jessica Martinez",
-    age: 32,
-    duration: "8 months",
-    result: "Lost 45 lbs",
-    story: "I was skeptical at first, but FitZone changed my life. The supportive trainers and community kept me motivated. I've never felt better!",
-    beforeImage: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=600&fit=crop&q=80",
-    afterImage: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=600&fit=crop&q=80",
+    barber: "Dixon Peña",
+    hairCut: "Aquí va el corte de pelo realizado",
+    beforeImage: hairChangesImages.after1,
+    afterImage: hairChangesImages.before1,
   },
   {
-    name: "David Thompson",
-    age: 28,
-    duration: "6 months",
-    result: "Gained 20 lbs muscle",
-    story: "The strength training program and nutrition guidance helped me build the physique I always wanted. The trainers are true professionals.",
-    beforeImage: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&h=600&fit=crop&q=80",
-    afterImage: "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=400&h=600&fit=crop&q=80",
+    barber: "Emmanuel Peña",
+    hairCut: "Aquí va el corte de pelo realizado",
+    beforeImage: hairChangesImages.after2,
+    afterImage: hairChangesImages.before2,
   },
   {
-    name: "Lisa Anderson",
-    age: 35,
-    duration: "1 year",
-    result: "Completed first marathon",
-    story: "From never running to completing a marathon - FitZone's cardio programs and group classes gave me the endurance and confidence I needed.",
-    beforeImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=600&fit=crop&q=80",
-    afterImage: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=600&fit=crop&q=80",
+    barber: "Dixon Peña",
+    hairCut: "Aquí va el corte de pelo realizado",
+    beforeImage: hairChangesImages.after3,
+    afterImage: hairChangesImages.before3,
   },
 ];
 
