@@ -1,7 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import PricingPlans from "../components/PricingPlans.astro";
-import { siteData, pricingPlans, paymentOptions } from "../data/siteData";
+import {
+  siteData,
+  pricingPlans,
+  comparingPlans,
+  faqsPricing,
+} from "../data/siteData";
 ---
 
 <Layout
@@ -15,10 +20,10 @@ import { siteData, pricingPlans, paymentOptions } from "../data/siteData";
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto">
         <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
-          Membership Plans
+          Planes de membresía
         </h1>
         <p class="text-xl text-gray-300">
-          Flexible pricing options to fit your lifestyle and fitness goals
+          Planes flexibles que se adaptan a tu estilo y necesidades
         </p>
       </div>
     </div>
@@ -30,10 +35,10 @@ import { siteData, pricingPlans, paymentOptions } from "../data/siteData";
   <section class="py-20 bg-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-4xl font-bold text-white mb-4 text-center">
-        Plan Comparison
+        Comparación de Planes
       </h2>
       <p class="text-xl text-gray-300 mb-12 text-center max-w-2xl mx-auto">
-        Compare features across all membership plans
+        Compara los beneficios de todas nuestras membresías.
       </p>
       <div
         class="bg-slate-900 rounded-xl border border-slate-700 overflow-x-auto"
@@ -42,164 +47,42 @@ import { siteData, pricingPlans, paymentOptions } from "../data/siteData";
           <thead>
             <tr class="border-b border-slate-700">
               <th class="px-6 py-4 text-left text-white font-semibold"
-                >Features</th
+                >Beneficios</th
               >
               {
                 pricingPlans.map((plan) => (
                   <th class="px-6 py-4 text-center text-white font-semibold">
                     {plan.name}
-                    {plan.popular && (
-                      <span class="block text-orange-500 text-sm font-normal mt-1">
-                        Most Popular
-                      </span>
-                    )}
                   </th>
                 ))
               }
             </tr>
           </thead>
           <tbody class="text-gray-300">
-            <tr class="border-b border-slate-700/50">
-              <td class="px-6 py-4 font-medium">Gym Access</td>
-              {
-                pricingPlans.map(() => (
-                  <td class="px-6 py-4 text-center">
-                    <i class="ri-checkbox-circle-fill text-orange-500 text-xl" />
-                  </td>
-                ))
-              }
-            </tr>
-            <tr class="border-b border-slate-700/50">
-              <td class="px-6 py-4 font-medium">24/7 Access</td>
-              <td class="px-6 py-4 text-center">
-                <i class="ri-close-circle-line text-gray-600 text-xl"></i>
-              </td>
-              <td class="px-6 py-4 text-center">
-                <i class="ri-checkbox-circle-fill text-orange-500 text-xl"></i>
-              </td>
-              <td class="px-6 py-4 text-center">
-                <i class="ri-checkbox-circle-fill text-orange-500 text-xl"></i>
-              </td>
-            </tr>
-            <tr class="border-b border-slate-700/50">
-              <td class="px-6 py-4 font-medium">Group Classes</td>
-              <td class="px-6 py-4 text-center">
-                <i class="ri-close-circle-line text-gray-600 text-xl"></i>
-              </td>
-              <td class="px-6 py-4 text-center">
-                <i class="ri-checkbox-circle-fill text-orange-500 text-xl"></i>
-              </td>
-              <td class="px-6 py-4 text-center">
-                <i class="ri-checkbox-circle-fill text-orange-500 text-xl"></i>
-              </td>
-            </tr>
-            <tr class="border-b border-slate-700/50">
-              <td class="px-6 py-4 font-medium">Personal Trainer</td>
-              <td class="px-6 py-4 text-center">
-                <span class="text-gray-400 text-sm">Consultation only</span>
-              </td>
-              <td class="px-6 py-4 text-center">
-                <span class="text-gray-400 text-sm">Consultation included</span>
-              </td>
-              <td class="px-6 py-4 text-center">
-                <span class="text-orange-500 font-semibold">Unlimited</span>
-              </td>
-            </tr>
-            <tr class="border-b border-slate-700/50">
-              <td class="px-6 py-4 font-medium">Nutrition Guidance</td>
-              <td class="px-6 py-4 text-center">
-                <i class="ri-close-circle-line text-gray-600 text-xl"></i>
-              </td>
-              <td class="px-6 py-4 text-center">
-                <i class="ri-checkbox-circle-fill text-orange-500 text-xl"></i>
-              </td>
-              <td class="px-6 py-4 text-center">
-                <span class="text-orange-500 font-semibold">Custom Plans</span>
-              </td>
-            </tr>
-            <tr class="border-b border-slate-700/50">
-              <td class="px-6 py-4 font-medium">Spa & Recovery</td>
-              <td class="px-6 py-4 text-center">
-                <i class="ri-close-circle-line text-gray-600 text-xl"></i>
-              </td>
-              <td class="px-6 py-4 text-center">
-                <i class="ri-close-circle-line text-gray-600 text-xl"></i>
-              </td>
-              <td class="px-6 py-4 text-center">
-                <i class="ri-checkbox-circle-fill text-orange-500 text-xl"></i>
-              </td>
-            </tr>
-            <tr>
-              <td class="px-6 py-4 font-medium">Priority Booking</td>
-              <td class="px-6 py-4 text-center">
-                <i class="ri-close-circle-line text-gray-600 text-xl"></i>
-              </td>
-              <td class="px-6 py-4 text-center">
-                <i class="ri-close-circle-line text-gray-600 text-xl"></i>
-              </td>
-              <td class="px-6 py-4 text-center">
-                <i class="ri-checkbox-circle-fill text-orange-500 text-xl"></i>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- Payment Options Section -->
-  <section class="py-20 bg-slate-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-4xl font-bold text-white mb-12 text-center">
-        Payment Options
-      </h2>
-      <div
-        class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12"
-      >
-        {
-          paymentOptions.plans.map((plan) => (
-            <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 text-center hover:border-orange-500 transition-all">
-              <h3 class="text-2xl font-bold text-white mb-3">{plan.type}</h3>
-              <p class="text-gray-300 leading-relaxed">{plan.description}</p>
-            </div>
-          ))
-        }
-      </div>
-
-      <div class="max-w-4xl mx-auto">
-        <div class="bg-slate-800 p-8 rounded-xl border border-slate-700 mb-8">
-          <h3 class="text-2xl font-bold text-white mb-6 text-center">
-            Accepted Payment Methods
-          </h3>
-          <div class="flex flex-wrap justify-center gap-4">
             {
-              paymentOptions.methods.map((method) => (
-                <div class="bg-slate-900 px-6 py-3 rounded-lg border border-slate-700">
-                  <span class="text-gray-300 font-medium">{method}</span>
-                </div>
+              comparingPlans.map((data) => (
+                <tr class="border-b border-slate-700/50">
+                  <td class="px-6 py-4 font-medium text-pretty lg:w-5/12">
+                    {data.benefit}
+                  </td>
+                  {data.apply.map((item) => (
+                    <td class="px-6 py-4 text-center">
+                      {
+                        item === true ? (
+                        <i class="ri-checkbox-circle-fill text-cyan-500 text-xl" />
+                        ) : item === false ? (
+                        <i class="ri-close-circle-line text-gray-500 text-xl"></i>
+                        ) : (
+                        <span class="text-cyan-500 font-semibold">{item}</span>
+                        )
+                      }
+                    </td>
+                  ))}
+                </tr>
               ))
             }
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div
-            class="bg-orange-500/10 border border-orange-500/30 p-6 rounded-xl text-center"
-          >
-            <i class="ri-shield-check-line text-4xl text-orange-500 mb-4"></i>
-            <h4 class="text-xl font-bold text-white mb-2">
-              Money-Back Guarantee
-            </h4>
-            <p class="text-gray-300">{paymentOptions.guarantee}</p>
-          </div>
-          <div
-            class="bg-orange-500/10 border border-orange-500/30 p-6 rounded-xl text-center"
-          >
-            <i class="ri-gift-line text-4xl text-orange-500 mb-4"></i>
-            <h4 class="text-xl font-bold text-white mb-2">Free Trial</h4>
-            <p class="text-gray-300">{paymentOptions.trial}</p>
-          </div>
-        </div>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
@@ -208,57 +91,20 @@ import { siteData, pricingPlans, paymentOptions } from "../data/siteData";
   <section class="py-20 bg-slate-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-4xl font-bold text-white mb-12 text-center">
-        Frequently Asked Questions
+        Preguntas Frecuentes
       </h2>
       <div class="max-w-3xl mx-auto space-y-6">
-        <div
-          class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-orange-500 transition-all"
-        >
-          <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-            <i class="ri-question-line text-orange-500"></i>
-            Can I cancel my membership anytime?
-          </h3>
-          <p class="text-gray-400 leading-relaxed">
-            Yes, you can cancel your membership at any time with 30 days notice.
-            No long-term contracts required.
-          </p>
-        </div>
-        <div
-          class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-orange-500 transition-all"
-        >
-          <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-            <i class="ri-question-line text-orange-500"></i>
-            Do you offer trial periods?
-          </h3>
-          <p class="text-gray-400 leading-relaxed">
-            Yes! We offer a 7-day free trial for new members. Come in and
-            experience everything we have to offer.
-          </p>
-        </div>
-        <div
-          class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-orange-500 transition-all"
-        >
-          <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-            <i class="ri-question-line text-orange-500"></i>
-            Are personal training sessions included?
-          </h3>
-          <p class="text-gray-400 leading-relaxed">
-            Personal training sessions are included in Premium and Elite plans.
-            Basic members can purchase sessions separately.
-          </p>
-        </div>
-        <div
-          class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-orange-500 transition-all"
-        >
-          <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
-            <i class="ri-question-line text-orange-500"></i>
-            What payment methods do you accept?
-          </h3>
-          <p class="text-gray-400 leading-relaxed">
-            We accept all major credit cards, debit cards, and bank transfers.
-            Monthly payments are automatically processed.
-          </p>
-        </div>
+        {
+          faqsPricing.map((faq) => (
+            <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all">
+              <h3 class="text-xl font-bold text-white mb-3 flex items-center gap-2">
+                <i class="ri-question-line text-cyan-500" />
+                {faq.question}
+              </h3>
+              <p class="text-gray-400 leading-relaxed">{faq.answer}</p>
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>

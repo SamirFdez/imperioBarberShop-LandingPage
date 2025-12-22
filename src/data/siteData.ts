@@ -1,5 +1,6 @@
 import { productImages } from "@/assets/products";
 import { hairChangesImages } from "@/assets/hairChanges";
+import logo from "@/assets/ui/logo.png";
 
 export const wsMessage = encodeURIComponent(
   "Hola, estoy interesado en adquirir un servicio."
@@ -50,12 +51,12 @@ export const socialLinks = [
 export const contactInfo = [
   {
     icon: "ri-map-pin-line",
-    title: "Address",
+    title: "Dirección",
     content: siteData.address,
   },
   {
     icon: "ri-phone-line",
-    title: "Phone",
+    title: "Teléfono",
     content: siteData.phone,
   },
   {
@@ -182,7 +183,7 @@ export const classes = [
 
 export const pricingPlans = [
   {
-    name: "Vip",
+    name: "VIP",
     price: "RD$ 1,000",
     period: "/mes",
     features: [
@@ -193,7 +194,7 @@ export const pricingPlans = [
     popular: false,
   },
   {
-    name: "Pro",
+    name: "PRO",
     price: "RD$ 2,000",
     period: "/mes",
     features: [
@@ -205,7 +206,7 @@ export const pricingPlans = [
     popular: true,
   },
   {
-    name: "Elite",
+    name: "ELITE",
     price: "RD$ 4,000",
     period: "/mes",
     features: [
@@ -218,6 +219,37 @@ export const pricingPlans = [
     popular: false,
   },
 ];
+
+export const comparingPlans = [
+  {
+    benefit: "Una reservación cada 15 días",
+    apply: [true, false, false]
+  },
+  {
+    benefit: "Una reservación cada semana",
+    apply: [false, true, false]
+  },
+  {
+    benefit: "Dos reservaciones cada semana",
+    apply: [false, false, true]
+  },
+  {
+    benefit: "Tarjeta de presentación",
+    apply: [true, true, true]
+  },
+  {
+    benefit: "Descuentos en productos de peluquería",
+    apply: ['5%', '10%', '15%']
+  },
+  {
+    benefit: "Horario extendido",
+    apply: [false, true, true]
+  },
+  {
+    benefit: "Servicio a domicilio",
+    apply: [false, false, true]
+  },
+]
 
 export const testimonials = [
   {
@@ -283,7 +315,7 @@ export const faqs = [
   },
   {
     question: "¿Qué métodos de pago aceptan?",
-    answer: "Aceptamos efectivo y transferencias a diferentes entidades bancarias",
+    answer: "Aceptamos efectivo y transferencias a diferentes entidades bancarias.",
   },
   {
     question: "¿Cuál es el horario laboral?",
@@ -298,6 +330,25 @@ export const faqs = [
     answer: "Sí, contamos con el parqueo de la plaza para la comodidad de nuestros clientes.",
   },
 ];
+
+export const faqsPricing = [
+  {
+    question: "¿Puedo cancelar mi membresía en cualquier momento?",
+    answer: "Sí, puedes cancelar tu membresía cuando lo desees con días de aviso previo."
+  },
+  {
+    question: "¿Qué pasa si no pago mi membresía a tiempo?",
+    answer: "Las membresías se gestionan de forma mensual. Si el pago no se realiza a tiempo, la membresía se suspende automáticamente hasta que el pago sea regularizado."
+  },
+  {
+    question: "¿Los barberos están incluidos en la membresía?",
+    answer: "Sí. Todas nuestras membresías incluyen atención con el barbero de tu preferencia, según disponibilidad."
+  },
+  {
+    question: "¿Qué métodos de pago aceptan?",
+    answer: "Aceptamos efectivo y transferencias a diferentes entidades bancarias.",
+  }
+]
 
 export const classSchedule = [
   { time: "6:00 AM", class: "HIIT Training", trainer: "Mike Chen" },
@@ -397,49 +448,37 @@ export const fullSchedule = {
 
 export const trainers = [
   {
-    name: "John Smith",
-    role: "Head Trainer",
-    specialization: "Strength Training & Nutrition",
-    experience: "10+ years",
-    bio: "John is a certified strength and conditioning specialist with over a decade of experience helping athletes and fitness enthusiasts achieve their goals. He specializes in strength training, powerlifting, and nutrition coaching.",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&q=80",
-    certifications: ["CSCS", "NASM-CPT", "Nutrition Specialist"],
+    name: "Dixon Peña",
+    role: "Administrador & Barbero",
+    // specialization: "Strength Training & Nutrition",
+    experience: "15+ años",
+    bio: "Aquí va una breve descripción...",
+    image: logo,
+    certifications: ["Corte", "Fade", "Cejas", "Barba", "Diseños"],
   },
   {
-    name: "Sarah Johnson",
-    role: "Yoga & Pilates Instructor",
-    specialization: "Yoga, Pilates & Holistic Wellness",
-    experience: "8+ years",
-    bio: "Sarah is a certified yoga and Pilates instructor with extensive training in multiple yoga styles. She combines traditional practices with modern techniques to help members find balance, flexibility, and inner peace.",
-    image: "https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&h=400&fit=crop&q=80",
-    certifications: ["RYT-500", "Pilates Certified", "Meditation Instructor"],
+    name: "Emmanuel Peña",
+    role: "Barbero",
+    experience: "8+ años",
+    bio: "Aquí va una breve descripción...",
+    image: logo,
+    certifications: ["Corte", "Fade", "Cejas", "Barba"],
   },
   {
-    name: "Mike Chen",
-    role: "HIIT Specialist",
-    specialization: "High-Intensity Training & Athletic Performance",
-    experience: "7+ years",
-    bio: "Mike is an expert in high-intensity interval training and athletic performance. His dynamic classes push members to new limits while maintaining safety and proper form. He's passionate about helping people discover their inner athlete.",
-    image: "https://images.unsplash.com/photo-1594381898411-846e7d193883?w=400&h=400&fit=crop&q=80",
-    certifications: ["ACE-CPT", "HIIT Specialist", "Athletic Performance Coach"],
+    name: "Samir La Para",
+    role: "Barbero",
+    experience: "1 año",
+    bio: "Aquí va una breve descripción...",
+    image: logo,
+    certifications: ["Corte", "Cejas", "Barba"],
   },
   {
-    name: "Emma Davis",
-    role: "Cardio & Dance Instructor",
-    specialization: "Cardio, Dance Fitness & Zumba",
-    experience: "5+ years",
-    bio: "Emma brings energy and fun to every class. With a background in dance and fitness, she creates engaging cardio workouts that make exercise enjoyable. Her classes are perfect for those who want to have fun while getting fit.",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&q=80",
-    certifications: ["Zumba Certified", "Dance Fitness Instructor", "ACE-CPT"],
-  },
-  {
-    name: "James Wilson",
-    role: "CrossFit Coach",
-    specialization: "CrossFit & Functional Movement",
-    experience: "6+ years",
-    bio: "James is a Level 2 CrossFit coach with a passion for functional fitness. He helps members build strength, improve mobility, and achieve their fitness goals through varied, high-intensity workouts.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&q=80",
-    certifications: ["CrossFit Level 2", "Functional Movement Specialist", "Olympic Lifting Coach"],
+    name: "Misael",
+    role: "Recepcionista",
+    experience: "1 año",
+    bio: "Aquí va una breve descripción...",
+    image: logo,
+    certifications: ["Cajero", "Community Manager"],
   },
 ];
 
