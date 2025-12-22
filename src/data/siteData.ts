@@ -73,7 +73,7 @@ export const contactInfo = [
 
 export const navigation = [
   { name: "Inicio", href: "/" },
-  { name: "Servicios", href: "/services" },
+  { name: "Servicios", href: "" },
   { name: "Membresía", href: "/pricing" },
   { name: "Nosotros", href: "/about" },
   { name: "Contacto", href: "/contact" },
