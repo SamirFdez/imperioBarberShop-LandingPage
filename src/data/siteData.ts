@@ -446,15 +446,22 @@ export const fullSchedule = {
   ],
 };
 
-export const trainers = [
+export const employees = [
   {
     name: "Dixon Peña",
     role: "Administrador & Barbero",
-    // specialization: "Strength Training & Nutrition",
     experience: "15+ años",
     bio: "Aquí va una breve descripción...",
     image: logo,
     certifications: ["Corte", "Fade", "Cejas", "Barba", "Diseños"],
+  },
+  {
+    name: "Misael",
+    role: "Recepcionista",
+    experience: "1 año",
+    bio: "Aquí va una breve descripción...",
+    image: logo,
+    certifications: ["Cajero", "Community Manager"],
   },
   {
     name: "Emmanuel Peña",
@@ -471,14 +478,6 @@ export const trainers = [
     bio: "Aquí va una breve descripción...",
     image: logo,
     certifications: ["Corte", "Cejas", "Barba"],
-  },
-  {
-    name: "Misael",
-    role: "Recepcionista",
-    experience: "1 año",
-    bio: "Aquí va una breve descripción...",
-    image: logo,
-    certifications: ["Cajero", "Community Manager"],
   },
 ];
 
@@ -502,34 +501,34 @@ export const ourValues = [
 
 export const history = [
   {
-    year: "2009",
-    title: "Founded",
-    description: "FitZone Gym was founded with a vision to create an inclusive fitness community where everyone feels welcome.",
+    year: "2011",
+    title: "Fundada",
+    description: "Imperio Barber Shop fue creada para brindar una experiencia de barbería moderna, profesional y accesible para todos.",
   },
   {
-    year: "2012",
-    title: "First Expansion",
-    description: "Expanded facilities to include a dedicated group class studio and added 20+ new pieces of equipment.",
+    year: "2014",
+    title: "Primera Expansión",
+    description: "El crecimiento de nuestra comunidad nos permitió mejorar el espacio y optimizar la experiencia en cada visita.",
   },
   {
-    year: "2015",
-    title: "24/7 Access",
-    description: "Introduced 24/7 access for Premium and Elite members, making fitness accessible around the clock.",
+    year: "2016",
+    title: "Confianza de la Comunidad",
+    description: "Gracias al apoyo de nuestros clientes, nos consolidamos como una barbería de referencia en la zona.",
   },
   {
-    year: "2018",
-    title: "500 Members Milestone",
-    description: "Reached 500 active members and expanded our trainer team to 20 certified professionals.",
+    year: "2019",
+    title: "Construcción de Nuestra Marca",
+    description: "Definimos una identidad sólida basada en estilo, calidad y confianza, reflejada en cada detalle de la barbería.",
   },
   {
-    year: "2020",
-    title: "Digital Integration",
-    description: "Launched online class booking and virtual training options to adapt to changing needs.",
+    year: "2022",
+    title: "Lanzamiento de Productos",
+    description: "Seleccionamos productos profesionales para el cuidado del cabello y la barba, recomendados por nuestros barberos.",
   },
   {
-    year: "2024",
-    title: "Award Winner",
-    description: "Recognized as 'Best Gym 2024' by the local fitness community, celebrating 15 years of excellence.",
+    year: "2025",
+    title: "Lanzamiento de Membresías",
+    description: "Creamos nuestras membresías para ofrecer mayor comodidad, beneficios exclusivos y una experiencia continua a los clientes que confían en nosotros mes a mes.",
   },
 ];
 
